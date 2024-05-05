@@ -6,7 +6,7 @@ use sir_model::{SIRModel, PersonState, State};
 use person::Interaction;
 use petgraph::Graph;
 use petgraph::graph::NodeIndex;
-use rand::Rng;  // Import the Rng trait
+use rand::Rng; 
 
 fn main() {
     let num_nodes = 1000;
