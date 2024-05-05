@@ -1,8 +1,8 @@
 Project Overview:
 The project involves implementing a Susceptible-Infected-Recovered (SIR) model using Rust, focusing on simulating the spread of an infectious disease across a network represented as a graph. The nodes of the graph represent individuals, and edges indicate potential paths for disease transmission. Each node can be in one of three states: susceptible, infected, or recovered. The simulation progresses through discrete time steps, during which the infection and recovery probabilities (beta and gamma, respectively) dictate state transitions.
 
+Additionally, a synthetic dataset was generated to populate the graph, comprising a specified number of nodes interconnected with random edges. This synthetic data provided a controlled environment for testing the SIR model's behavior under various network structures.
+
 The project also incorporates graph centrality measures to analyze the influence of nodes within the network. Degree centrality measures the number of direct connections a node has, highlighting nodes with potential for high transmission rates due to their numerous contacts. Betweenness centrality, intended to measure a node’s influence over the spread of information (or disease) through the graph by lying on the shortest paths between other nodes, was also calculated but resulted in all zeros. This outcome suggests that the graph may either be too disconnected or structured in a way that no single node significantly influences the transfer across the network.
 
 The output of the project shows the calculated degree centrality for various nodes, revealing a range of connectivity across them, with some nodes having as high as 41 connections. In contrast, the betweenness centrality for all nodes came out to zero, indicating no node uniquely dominates the shortest paths between others under the current graph configuration.
-
-This model and its analysis can be essential for understanding the dynamics of disease spread in different network structures and evaluating the impact of interventions based on node centrality.
