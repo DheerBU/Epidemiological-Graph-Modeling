@@ -100,10 +100,10 @@ impl SIRModel {
                 &self.graph, 
                 *node, 
                 None, 
-                |e| (e.weight().strength * 100.0) as u32  // Properly handle float by scaling and converting to u32
+                |e| (e.weight().strength * 100.0) as u32  
             );
     
-            // Iterate over all nodes again to check if they appear in the shortest path from the current node
+            
             for (target, _) in shortest_paths {
                 if node != &target {
                     *centrality.entry(target.index()).or_insert(0.0) += 1.0;
